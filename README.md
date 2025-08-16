@@ -1,4 +1,5 @@
 User Profile Directory
+
 A simple user profile directory built with HTML, tailwindCSS, and JavaScript(API).  
 Features  
 - Responsive design  
