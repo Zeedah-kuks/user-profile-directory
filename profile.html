@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Profile Directory</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-blue transition-colors duration-300" id="body">
+  <div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-6 text-center">User Profile Directory</h1>
+    
+    <!-- Controls -->
+<div class="flex flex-col md:flex-row gap-4 mb-6 justify-center">
+  <input id="search" type="text" placeholder="Search by name or username"
+    class="border rounded-lg p-2 w-full md:w-1/3 
+           bg-white text-gray-900 
+           dark:bg-gray-100 dark:text-gray-900 dark:border-gray-600" />
+  
+  <select id="filterCity"
+    class="border rounded-lg p-2 w-full md:w-1/6
+           bg-white text-gray-900 
+           dark:bg-gray-100 dark:text-gray-900 dark:border-gray-600">
+    <option value="">Filter by City</option>
+  </select>
+  
+  <select id="filterCompany"
+    class="border rounded-lg p-2 w-full md:w-1/6
+           bg-white text-gray-900 
+           dark:bg-gray-100 dark:text-gray-900 dark:border-gray-600">
+    <option value="">Filter by Company</option>
+  </select>
+
+  <button id="darkModeBtn" 
+    class="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-500">
+    Toggle Dark Mode
+  </button>
+</div>
+
+    <!-- Loading & Error -->
+    <div id="loading" class="text-center text-lg">Loading users...</div>
+    <div id="error" class="text-center text-red-500 hidden">Failed to load users.</div>
+
+    <!-- User Cards Grid -->
+    <div id="userCards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+  </div>
+
+  <!-- Link external JS -->
+  <script src="profile.js"></script>
+</body>
+</html>
